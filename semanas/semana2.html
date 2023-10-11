@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Semana N° 2</title>
+    <link rel="stylesheet" href="../estilos/semana1.css">
+    <link rel="stylesheet" href="../estilos/general.css">
+</head>
+<body>
+
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a>GabRC6979</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="../index.html" >INICIO</a></li>
+                    <li><a href="../secciones/caracteristicas.html">CARACTERISTICAS</a></li>
+                    <li><a href="../secciones/skills.html">SKILLS</a></li>
+                    <li><a href="../secciones/semanas.html">SEMANAS</a></li>
+                    <li><a href="../secciones/reflexion.html">REFLEXION</a></li>
+                    <li><a href="../secciones/bibliografia.html">BIBLIOGRAFIA</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+    
+
+
+
+     <!-- SECCION SOBRE MI -->
+     <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <div class="titulo-y-botones">
+                <h2>SEMANA N° 2</h2>
+                <div class="botones">
+                    <a class="boton anterior" href="semana1.html">Anterior</a>
+                    <a class="boton siguiente" href="semana3.html">Siguiente</a>
+                    <a class="boton volver" href="../secciones/semanas.html">Volver</a>
+                </div>
+            </div>
+            <p><span>CONTENIDO DE LA SEMANA.</span> 
+               HTML
+           </p>
+
+           <p1> 
+            -¿Cómo funciona HTML?
+            <br>-Principales etiquetas del Lenguaje HTML 5
+            <br>-Árbol DOM 
+            <br>-Ciclo de Vida de una Página Web</p1>
+
+
+            <center><h1><br>¿Cómo funciona HTML?
+            </h1>
+            </center>
+            <p1>  
+                
+            
+            
+                <br>HTML, es un lenguaje de marcado, define la 
+                semántica y estructura al contenido de las 
+                páginas web. Se basa en ETIQUETAS “<“ “>”
+                <br>Se guarda en archivos con extensión .html o .htm
+                y se ve a través de cualquier navegador.
+                <br>Es parte del estándar SGML (Standard 
+                Generalized Markup Language o lenguaje de 
+                marcado generalizado estándar)<br><br>
+            </p1>
+            <div><img class="imagen-responsive" src="../img/html1.jpg" alt=""></div>
+
+
+            <center><h1><br>Principales etiquetas del Lenguaje HTML 5<br><br>
+            </h1>
+            </center>
+            <div><img class="imagen-responsive" src="../img/html2.jpg" alt=""></div>
+
+
+
+            <center><h1><br>Árbol DOM<br>
+            </h1>
+            </center>
+            <p1> <br>Qué es?
+                DOM (Document Object Model) es una interfaz para documentos HTML y XML que se representa como un 
+                árbol de elementos. Permite leer y manipular el contenido, la estructura y los estilos de la página con un 
+                lenguaje de scripting como JavaScript.  
+            
+                <br>-RENDER TREE
+<br>*La forma de un documento HTML, muestra estilos e interactividad, se 
+denomina Critical Rendering Path. Primero se establece que se va a 
+renderizar y se denomina render tree (DOM + CSSOM). Luego, el 
+navegador realiza el renderizado.
+<br>-CSSOM: representa los estilos asociados a los elementos.
+<br>-DOM: representa los elementos.
+<br>-El render tree excluye los elementos que no están visibles como por 
+ejemplo, los que tienen el estilo display: none. El DOM si lo incluiría en 
+su árbol de nodos.
+<br>*ÁRBOL DE NODOS
+<br>-El objetivo del DOM es convertir la estructura y el contenido del 
+documento HTML en un modelo de objeto que puede ser utilizado por 
+varios programas. La estructura del documento es conocida como un 
+árbol de nodos (node tree)<br>
+            </p1>
+            <div><br><img class="imagen-responsive" src="../img/html3.jpg" alt=""></div>
+            <p1><br>DOM (Document Object Model) es la interfaz que permite 
+                que lenguajes de programación como JavaScript, 
+                modifiquen la estructura, el estilo o el
+                contenido de la página web.
+                <br>-A través de la etiqueta "script", se puede comenzar a 
+                manipular el documento o los elementos de la página.
+                <br>-El DOM nos ofrece una multitud de propiedades y 
+                métodos para acceder a los diferentes elementos y poder 
+                modificarlos.
+            </p1>
+            <div><br><img  class="imagen-responsive"src="../img/html4.jpg" alt=""></div>
+            <div><br><img class="imagen-responsive" src="../img/html5.jpg" alt=""></div>
+
+            <center><h1><br>Ciclo de Vida de una Página Web<br>
+            </h1>
+            </center>
+            <p1> 
+                <br>
+                También referido como Critical Rendering Path (ruta de renderizado crítica) es la secuencia de pasos que sigue el 
+                navegador para convertir HTML, CSS y JavaScript en píxeles en la pantalla. Esta secuencia de pasos es realizada por el motor de renderizado del navegador.                
+            
+                <br>¿EN QUÉ CONSISTE?
+                <br>Una solicitud de una página web o aplicación comienza con una petición 
+                HTML. Al realizar una solicitud, el servidor devuelve los encabezados y datos 
+de respuesta..
+<br>1. Se crea el Document Object Model (DOM) a partir de la respuesta HTML. 
+También inicia solicitudes cada vez que encuentra enlaces a recursos 
+externos, ya sean hojas de estilo, scripts o referencias de imágenes 
+incrustadas.
+<br>-Algunas solicitudes son bloqueantes, lo que significa que el parseo
+del resto del HTML se detiene hasta que se cargue el recurso.
+<br>2. Se crea el CSS Object Model (CSSOM).
+<br>3. Cuando tiene el DOM y el CSSOM listos, se combinan en el árbol de 
+renderizado (Render Tree), obteniendo los estilos para todo el contenido 
+visible.
+<br>4. Una vez que se completa el árbol de procesamiento, el diseño calcula la 
+posición y el tamaño exactos de cada objeto (layout) del árbol de 
+procesamiento.
+<br>5. Una vez completado, se procede a la representación o “pintado”, que 
+consiste en tomar el árbol de renderizado final y renderizar los píxeles en 
+la pantalla.</p1>
+
+<div><br><img class="imagen-responsive" src="../img/html6.jpg" alt=""></div>
+        </div>
+   
+    </section>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Semana N° 3</title>
+    
+    <link rel="stylesheet" href="../estilos/general.css">
+</head>
+<body>
+
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a>GabRC6979</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="../index.html" >INICIO</a></li>
+                    <li><a href="../secciones/caracteristicas.html">CARACTERISTICAS</a></li>
+                    <li><a href="../secciones/skills.html">SKILLS</a></li>
+                    <li><a href="../secciones/semanas.html">SEMANAS</a></li>
+                    <li><a href="../secciones/reflexion.html">REFLEXION</a></li>
+                    <li><a href="../secciones/bibliografia.html">BIBLIOGRAFIA</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+    
+
+
+
+     <!-- SECCION SOBRE MI -->
+     <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <div class="titulo-y-botones">
+                <h2>SEMANA N° 3</h2>
+                <div class="botones">
+                    <a class="boton anterior" href="semana2.html">Anterior</a>
+                    <a class="boton siguiente" href="semana4.html">Siguiente</a>
+                    <a class="boton volver" href="../secciones/semanas.html">Volver</a>
+                </div>
+            </div>
+            <p><span>CONTENIDO DE LA SEMANA.</span> 
+               CSS
+           </p>
+
+
+           <p1> 
+            -¿Qué es CSS? 
+            <br>-¿Dónde y cómo utilizar CSS? 
+            <br>-Selectores 
+            <br>a. De tipo 
+            <br>b. De clase 
+            <br>c. De id 
+            <br>d. Selector universal 
+            <br>e. Selector de atributo 
+            <br> -Combinador de hermanos adyacentes 
+            <br>-Combinador General de hermanos 
+            <br>-Combinador de hijo 
+            <br> -Combinador de descendientes
+            </p1>
+
+
+            <center><h1><br>¿Qué es CSS?
+            </h1>
+            </center>
+            <p1>  
+                CSS, Cascading Style Sheets, Hojas de Estilo en 
+                Cascada Es un lenguaje utilizado para la 
+                presentación (diseño o aspecto visual) del 
+                contenido de una página web. Utilizando CSS 
+                daremos estilo a cualquier tag de HTML.<br><br>
+            </p1>
+
+            <div><img class="imagen-responsive" src="../img/css.jpg" alt="">
+            </div>
+
+            
+            <center><h1><br><br>SELECTORES<br><br><br></center>
+            </h1>
+            <div><img class="imagen-responsive" src="../img/css2.jpg" alt="">
+            </div>
+
+
+
+            
+            <center><h1>UNIDADES DE MEDIDAS<br>
+            </h1>
+            </center>
+            <p1>  
+                <br>Definen la altura, anchura y margen de los elementos a través de un valor numérico (entero o decimal), seguido de una 
+                unidad de medida. Para establecer la disposición de los elementos en el documento. 
+                <br><br>UNIDADES RELATIVAS
+                <br><br>*em: unidad relativa a la propiedad font-size del elemento 
+padre.
+<br>-html { font-size: 13px }
+<br>-h1 { font-size: 2em } // 13px * 2 = 26px
+<br>* rem: igual que la anterior, pero esta es relativa con respecto al 
+font-size del elemento root (root es la etiqueta html). En caso 
+de no definirlo, toma el valor por defecto que son 16px. En el 
+ejemplo anterior, 1rem = 13px. Esto es muy útil porque si algún 
+usuario decide cambiar el tamaño de letra por defecto del 
+navegador, todos los elementos del árbol serán flexibles al 
+cambio.
+<br>*ch: relativa al ancho del cero (0).
+<br>*vw: relativa al 1% del ancho del viewport. El viewport es el 
+tamaño de la ventana del navegador.
+<br>* vh: igual que la anterior, pero relativa al 1% del alto del viewport.
+<br>* %: relativa al elemento padre
+<br>
+<br>UNIDADES ABSOLUTAS(Tamaño fijo no cambia)
+<br><br>- px (píxeles).
+<br>- cm (centímetros).
+<br>- mm (milímetros).
+<br>- in (pulgadas): equivalente a 25,4 milímetros.
+<br>- pt (puntos): equivalente a 0,35 milímetros.
+<br>- pc (picas): equivalente a 4,23 milímetr
+<br> </p1>
+
+
+            <center><h1>FLEXBOX<br>
+            </h1>
+            </center>
+            <p1>  
+                <br>Estilo CSS utilizado para establecer el espacio de los elementos en filas o columnas de una forma dinámica y sencilla y que 
+                permite desarrollos responsive gracias a elementos flexibles que se adaptan automáticamente al contenedor.
+                <br><br>PREVIO A FLEX<br>
+                <br> Antes se usaban
+                <br> En línea (display:inline).
+                <br> En bloque (display:block).
+                <br> En tabla (display:table).
+                <br> Position (static, relative, absolute, etc.).
+<br> Float (right, left, inherit, etc.).
+ <br> Flex es una mezcla de estas 
+propiedades en cuanto a cómo afecta a 
+la disposición de los elementos 
+contenidos en un contenedor. 
+<br> Un diseño Flexbox consiste en un flex 
+container que contiene elementos 
+flexibles (flex items).
+<br><br>PROPIEDADES MAS USADAS<br><br>
+
+Para que un contenedor sea flexible, se usa la propiedad display: flex.
+<br> Al usar flexbox, el eje principal es el horizontal en caso de que flex-direction sea una fila, 
+y vertical en caso una columna. El eje secundario será el perpendicular al principal.
+<br>Alineamiento a lo largo del eje principal: justify-content: flex-start | flex-end | center.
+<br>Alineamiento a lo largo del eje secundario: align-items: flex-start | flex-end | center.
+<br>Dirección de los elementos (de izquierda a derecha, de arriba a bajo, etc.): flex-direction: column | row | row-inverse
+<br>Por defecto, Flex intenta ajustar los elementos en una fila pero esto se puede 
+modificar: flex-wrap: wrap | no-wrap | wrap-inverse.
+<br><br></p1>
+
+            <div><img class="imagen-responsive" src="../img/css3.jpg" alt="">
+            </div>
+
+            <center><h1><br>GRID LAYOUT
+            </h1>
+            </center>
+            <p1>  
+                <br>CSS Grid o Grid Layout, es un estándar de las Hojas de Estilo en Cascada que nos permite maquetar contenido ajustándose a 
+                una rejilla en dos dimensiones totalmente configurables mediante estilos CSS.
+                <br><br>CONCEPTOS BASICOS<br><br>
+                Grid Layout se compone de líneas horizontales (para las filas) y verticales 
+(para las columnas).
+<br>El espacio delimitado entre dos líneas consecutivas se le llama track.
+Una vez que especificamos el número de filas y columnas, Grid Layout
+numera las líneas automáticamente.
+<br>Una celda es el espacio que define la intersección de las líneas verticales y 
+horizontales, teniendo el tamaño 1x1 en nuestra rejilla.
+Un Grid es el espacio que ocupa más de una celda en nuestra rejilla
+            </p1>
+
+            <div><img class="imagen-responsive" src="../img/css4.jpg" alt="">
+            </div>
+            <p1><br><br>CARACTERISTICAS
+                <br> Es parte de la especificación de CSS, por lo que no hay 
+problemas de incompatibilidades. 
+<br> Los ítems cuya posición no se especifique se colocaran 
+solos (de manera automática), gracias al algoritmo de 
+auto placement, ya que Grid es una rejilla, no es una 
+tabla. 
+<br> Nos ofrece una sintaxis muy extensa en su 
+especificación.
+<br> Nos facilita la creación de diseños complejos con 
+layouts.
+<br> Grid Layout y Flexbox se pueden combinar.  Permitiéndonos contener dentro de un Grid una 
+estructura hecha en Flexbox que sólo crece en una 
+dirección.
+<br> Un contenedor en Flexbox es el conjunto de ítems en 
+una dirección, a diferencia de css Grid en el cada GRID es un contenedor.
+
+            </p1>
+        </div>
+     
+    </section>
+    <script src="../script.js"></script>
+</body>
+</html>
