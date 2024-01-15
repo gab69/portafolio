@@ -3,7 +3,7 @@
     box-sizing: border-box;
     font-family: 'Work Sans';
     margin: 0;
-    padding: 0;
+    
 }
 
 /* MENU */
@@ -240,9 +240,6 @@
 }
 
 
-/* imagen semana 12 */
-
-/* Estilo inicial de la imagen */
 .sobremi .img-rotating {
     width: 350px;
     height: 350px;
@@ -321,3 +318,20 @@ img {
 }
 
 
+.sobremi .contenido-seccion .titulo-y-botones{
+  
+    background: #252A2E;
+    position: fixed;
+    width: 100%;
+    top: 75px;
+    left: 0;
+    z-index: 99;
+    padding-bottom: 30px;
+}
+
+.sobremi .contenido-seccion .contenido-texto{
+  
+
+    top: 750px;
+
+}

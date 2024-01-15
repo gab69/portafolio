@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Semana N° 9</title>
+
+    <link rel="stylesheet" href="../estilos/general.css">
+</head>
+
+<body>
+
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a>GabRC6979</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="../index.html">INICIO</a></li>
+                    <li><a href="../secciones/caracteristicas.html">CARACTERISTICAS</a></li>
+                    <li><a href="../secciones/skills.html">SKILLS</a></li>
+                    <li><a href="../secciones/semanas.html">SEMANAS</a></li>
+                    <li><a href="../secciones/reflexion.html">REFLEXION</a></li>
+                    <li><a href="../secciones/bibliografia.html">BIBLIOGRAFIA</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+
+
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <div class="titulo-y-botones">
+                <h2>SEMANA N° 9 </h2>
+                <div class="botones">
+                    <a class="boton anterior" href="semana8.html">Anterior</a>
+                    <a class="boton siguiente" href="semana10.html">Siguiente</a>
+                    <a class="boton volver" href="../secciones/semanas.html">Volver</a>
+                </div>
+            </div>
+            </br></br></br></br></br></br>
+            <p><span>CONTENIDO DE LA SEMANA.</span>
+                USO DE TypeScript
+            </p>
+
+
+            <p1>
+                <br> -State Hooks
+                <br>-Context Hooks
+                <br>-Ref Hooks
+                <br>-Effect Hooks
+                <br>-Performance Hooks
+                <br>-Resource Hooks
+                <br>-Other Hooks
+            </p1>
+
+            <p>
+                Instalación 
+Todos los frameworks React de grado de producción ofrecen soporte para el uso de TypeScript. Sigue la guía específica del framework para la instalación:
+
+Next.js
+Remix
+Gatsby
+Expo
+Añadir TypeScript a un proyecto React existente 
+Para instalar la última versión de las definiciones de tipos de React:
+
+            </p>
+            <div><img class="imagen-responsive" src="../img/t1.jpg" alt=""></div>
+
+
+
+           <p>
+
+            Las siguientes opciones del compilador deben ser configuradas en tu tsconfig.json:
+
+            dom debe incluirse en lib (Nota: Si no se especifica la opción lib, dom se incluye por defecto).
+            jsx debe configurarse con una de las opciones válidas. preserve debería ser suficiente para la mayoría de las aplicaciones. Si vas a publicar una biblioteca, consulta la documentación jsx para saber qué valor elegir.
+            
+            
+            
+            
+            TypeScript con Componentes de React 
+            
+
+
+            Escribir TypeScript con React es muy similar a escribir JavaScript con React. La diferencia clave cuando se trabaja con un componente es que puedes proporcionar tipos para las props de tu componente. Estos tipos se pueden usar para comprobar la corrección y proporcionar documentación en línea en los editores.
+
+Tomando el componente MyButton de la guía Inicio Rápido, podemos añadir un tipo que describa el title para el botón:
+           </p>
+
+           <div><img class="imagen-responsive" src="../img/t2.jpg" alt=""></div>
+
+
+           <p>
+            Esta sintaxis en línea es la forma más sencilla de proporcionar tipos para un componente, aunque una vez que empiezas a tener unos cuantos campos para describir puede llegar a ser inmanejable. En su lugar, puedes utilizar una interface o type para describir las props del componente:
+           </p>
+
+           <div><img class="imagen-responsive" src="../img/t3.jpg" alt=""></div>
+
+
+           <p>El tipo que describe las props de tu componente puede ser tan simple o tan complejo como necesites, aunque debería ser un tipo de objeto descrito con type o interface. Puedes aprender sobre cómo TypeScript describe objetos en Object Types pero también puedes estar interesado en usar Union Types para describir una prop que puede ser uno de varios tipos diferentes y la guía Creating Types from Types para casos de uso más avanzados.
+
+
+            Tipos útiles 
+Hay un conjunto bastante amplio de tipos que provienen del paquete @types/react, vale la pena leerlo cuando te sientas cómodo con cómo interactúan React y TypeScript. Puedes encontrarlos en la carpeta de React en DefinitelyTyped. Cubriremos algunos de los tipos más comunes aquí.
+
+Eventos del DOM 
+Cuando trabajas con eventos del DOM en React, el tipo del evento suele inferirse a partir del controlador de eventos. Sin embargo, cuando desear extraer una función para ser pasada a un controlador de eventos, necesitarás establecer de manera explícita el tipo del evento.
+
+           </p>
+           <div><img class="imagen-responsive" src="../img/t4.jpg" alt=""></div>
+
+           <p>Existen muchos tipos de eventos disponibles en los tipos de React - la lista completa se puede encontrar aquí, la cual se basa en los eventos más populares del DOM.
+
+            Al determinar el tipo que estás buscando, puedes mirar primero la información emergente para el controlador de eventos que estás utilizando, lo cual mostrará el tipo del evento.
+            
+            Si necesitas utilizar un evento que no está incluido en esta lista, puedes emplear el tipo React.SyntheticEvent, que es el tipo base para todos los eventos.
+            
+            Elementos hijos 
+            Hay dos caminos comunes para describir los hijos de un componente. El primero es utilizar el tipo React.ReactNode, que es una unión de todos los tipos posibles que se pueden pasar como hijos en JSX:</p>
+            <div><img class="imagen-responsive" src="../img/t5.jpg" alt=""></div>
+
+            <p>Esta es una definición muy amplia de hijos. El segundo es utilizar el tipo React.ReactElement, que es sólo elementos JSX y no primitivas JavaScript como strings o numbers:
+               
+
+
+            </p>
+            <div><img class="imagen-responsive" src="../img/t6.jpg" alt=""></div>
+            <p>Ten en cuenta que no puedes usar TypeScript para describir que los hijos son un cierto tipo de elementos JSX, por lo que no puedes usar el sistema de tipos para describir un componente que sólo acepta hijos <li>.
+
+                Puedes ver un ejemplo tanto de React.ReactNode como de React.ReactElement con el verificador de tipos en este TypeScript playground.</p>
+
+
+
+
+
+
+    </section>
+
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

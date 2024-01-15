@@ -1,11 +1,12 @@
 
-/* SECCION I N I C I O */
+/* SECCION PORTADA */
 .inicio {
-    background: url(../img/fondo.jpg);
-    height: 100vh;
+    background: #06122C;
+    height: 675px;
     color: #fff;
     display: flex;
-    /* Otras propiedades si es necesario */
+    padding-top: 70px;
+   
 }
 .inicio .contenido-banner{
     padding: 10px;

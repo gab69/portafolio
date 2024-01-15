@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Semana N° 15</title>
+    <link rel="stylesheet" href="../estilos/semana7.css">
+    <link rel="stylesheet" href="../estilos/general.css">
+</head>
+<body>
+
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a>GabRC6979</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="../index.html" >INICIO</a></li>
+                    <li><a href="../secciones/caracteristicas.html">CARACTERISTICAS</a></li>
+                    <li><a href="../secciones/skills.html">SKILLS</a></li>
+                    <li><a href="../secciones/semanas.html">SEMANAS</a></li>
+                    <li><a href="../secciones/reflexion.html">REFLEXION</a></li>
+                    <li><a href="../secciones/bibliografia.html">BIBLIOGRAFIA</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+    
+
+
+
+     <!-- SECCION SOBRE MI -->
+     <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <div class="titulo-y-botones">
+                <h2 >SEMANA N° 15 </h2>
+                <div class="botones">
+                    <a class="boton anterior" href="semana14.html">Anterior</a>
+                    <a class="boton siguiente" href="semana16.html">Siguiente</a>
+                    <a class="boton volver" href="../secciones/semanas.html">Volver</a>
+                </div>
+            </div>
+        </br></br></br></br></br></br>
+        <p><span>CONTENIDO DE LA SEMANA.</span>
+            USO DE TypeScript
+        </p>
+
+
+        <p1>
+            <br> -State Hooks
+            <br>-Context Hooks
+            <br>-Ref Hooks
+            <br>-Effect Hooks
+            <br>-Performance Hooks
+            <br>-Resource Hooks
+            <br>-Other Hooks
+        </p1>
+
+<p>Configuración
+    Para la implementación de los microservicios, utilizaremos Spring Boot y Spring Cloud.  El ejemplo estará compuesto de tres proyectos (uno por cada microservicio). A continuación muestro la configuración de los ficheros POM.xml.</p>
+
+
+        <div><img class="imagen-responsive" src="../img/c1.jpg" alt=""></div> 
+
+<p>Microservicio Registration
+    Como comenté antes, para implementar este servicio utilizaremos Eureka, un servidor de registro y descubrimiento de microservicios open source desarrollado por Netflix. Levantar una instancia de este servidor con Spring Cloud es muy sencillo. Aquí tienes el código completo:</p>
+
+<div><img class="imagen-responsive" src="../img/c2.jpg" alt=""></div> 
+
+
+<p>La anotación @SpringBootApplication indica que se trata de una aplicación Spring Boot y @EnableEurekaServer habilita el uso Eureka como servidor de registro y descubrimiento de microservicios.
+
+    Por defecto, cuando inicias una aplicación spring boot , se busca un fichero llamado application.properties o application.yml para acceder a su configuración, el cual deberá estar ubicado en la carpeta resources de nuestro proyecto. Su configuración es la siguiente:</p>
+
+    <div><img class="imagen-responsive" src="../img/c3.jpg" alt=""></div> 
+<p>Observa que:
+
+    En la configuración del fichero yml estamos indicando que no se trata de un microservicio cliente y que por tanto no queremos que se registre en Eureka (registerWithEureka: false).
+    Aunque por defecto Eureka escucha en el puerto 8761, para este ejemplo hemos indicado que utilice el puerto 1111. Prueba a ejecutar el servicio, comprueba que el servidor arranca correctamente y accede a https://localhost:1111 para visualizar el dashboard de Eureka.
+    El dashboard de Eureka está implementado usando plantillas FreeMarket (los otros dos microservicios que crearemos a continuación usarán thymeleaf para construir las vistas HTML.</p>
+
+    <div><img class="imagen-responsive" src="../img/c4.jpg" alt=""></div> 
+
+<p>Microservicio Greeting
+    Este microservicio gestionará peticiones que reciba por HTTP para devolver un saludo (greeting) a los nombres de las personas que reciba como entrada. Al arrancar greeting-service lo primero que hará será registrarse en Eureka.</p>
+
+    <div><img class="imagen-responsive" src="../img/c5.jpg" alt=""></div> 
+    <p>Respecto a las anotaciones utilizadas:
+
+        @SpringBootApplication define que es una aplicación Spring Boot
+        @EnableAutoConfiguration configura la aplicación sin necesidad de otros ficheros de configuración XML, etc.
+        @EnableDiscoveryClient  habilita el servicio de registro y descubrimiento. En este caso, este procesos se auto-registrará en Eureka utilizando el nombre de aplicación indicado en el fichero greeting-server.yml cuya configuración se muestra a continuación:</p>
+
+        <div><img class="imagen-responsive" src="../img/c6.jpg" alt=""></div> 
+        <p>En la configuración del fichero greeting-server.yml observamos que:
+
+            El nombre de la aplicación es greeting-service, que será utilizado para registrarse en Eureka
+            Se configura el puerto de escucha del servidor web (2222). Esto es necesario ya que vamos a ejecutar varios procesos que usan Tomcat y todos ellos no pueden estar escuchando al mismo tiempo del puerto 8080.
+            Se establece la URL de acceso al servicio de Eureka
+            Este microservicio utilizará Spring REST para ofrecer un interface RESTful sobre HTTP y poder así acceder a sus operaciones.</p>
+            <div><img class="imagen-responsive" src="../img/c7.jpg" alt=""></div> 
+            <p>El método greeting devolverá un objeto de tipo Greeting, cuya clase se muestra a continuación:</p>
+            <div><img class="imagen-responsive" src="../img/c8.jpg" alt=""></div> 
+            <p>Por último, ejecuta el microservicio greeting-service (método main de la clase GreetingServer) y comprueba que al refrescar el dahboard de Eureka, aparece el servicio registrado. Ten en cuenta que el registro puede durar entre 10-20 segundos en realizarse.</p>
+            <div><img class="imagen-responsive" src="../img/c9.jpg" alt=""></div> 
+
+            <div><img class="imagen-responsive" src="../img/c10.jpg" alt=""></div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+    <script src="../script.js"></script>
+</body>
+</html>

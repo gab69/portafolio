@@ -43,17 +43,126 @@
                 <h2 >SEMANA N° 7 </h2>
                 <div class="botones">
                     <a class="boton anterior" href="semana6.html">Anterior</a>
-                    <a class="boton siguiente" href="semana1.html">Siguiente</a>
+                    <a class="boton siguiente" href="semana8.html">Siguiente</a>
                     <a class="boton volver" href="../secciones/semanas.html">Volver</a>
                 </div>
             </div>
-            <p><span>CONTENIDO DE LA SEMANA.</span> 
-               SEMANA DE REVISIÓN
-           </p>
-        </div>
-        <img src="../img/consolidacion.png" class="img-rotating">
-    </section>
+        </br></br></br></br></br></br>
+            
+        <p><span>CONTENIDO DE LA SEMANA.</span> 
+            USO DE HOOKS
+        </p>
 
+
+        <p1> 
+        <br> -State Hooks
+        <br>-Context Hooks 
+        <br>-Ref Hooks
+        <br>-Effect Hooks
+        <br>-Performance Hooks 
+        <br>-Resource Hooks 
+        <br>-Other Hooks 
+     </p1>
+
+     <p>
+        Los Hooks te permiten usar diferentes funciones de React de tus componentes. Puedes usar los Hooks incorporados o combinarlos para construir los tuyos propios.
+        
+      
+        </p>
+        <center><h1>State Hooks  </h1></center>
+        <p>
+     El estado permite que un componente "recuerde" información como la entrada del usuario. Por ejemplo, un componente de
+     formulario puede usar el estado para almacenar el valor de entrada, mientras que un componente de galería de imágenes 
+     puede usar el estado para almacenar el índice de la imagen seleccionada.
+<br><br>
+Para agregar estado a un componente, use uno de estos Hooks:<br><br>
+- useState declara una variable de estado que puede actualizar directamente.
+    <br>- useReducer declara una variable de estado con la lógica de actualización dentro de una función reductora.
+
+</p>
+
+<div><img class="imagen-responsive" src="../img/hook1.jpg" alt=""></div>
+
+<p>
+    
+El contexto permite que un componente reciba información de padres lejanos sin pasarla como accesorios. Por ejemplo, el componente de nivel superior de su aplicación puede pasar el tema de la interfaz de usuario actual a todos los componentes siguientes, sin importar cuán profundos sean.
+
+    <br>useContext lee y se suscribe a un contexto.</p>
+    <div><img class="imagen-responsive" src="../img/hook2.jpg" alt=""></div>
+
+    <center><h1><br> Ref Hooks   </h1></center>
+    <p>
+
+Las referencias permiten que un componente contenga información que no se utiliza para la renderización, como un nodo DOM o un ID de tiempo de espera. <br> A diferencia del estado, actualizar una referencia no vuelve a representar su componente. <br> Las referencias son una «escotilla de escape» del paradigma React. <br> Son útiles cuando necesita trabajar con sistemas que no son React, como las API del navegador integradas.
+<br>
+<br>useRef declara una referencia. Puede contener cualquier valor, pero la mayoría de las veces se usa para contener un nodo DOM.
+<br><br>useImperativeHandle le permite personalizar la referencia expuesta por su componente. Esto rara vez se usa.
+
+<div><img class="imagen-responsive" src="../img/hook3.jpg" alt=""></div>
+<center><h1><br> Performance Hooks   </h1></center>
+<p>
+
+Los efectos permiten que un componente se conecte y sincronice con sistemas externos. Esto incluye lidiar con la red, el DOM del navegador, animaciones, widgets escritos usando una biblioteca de UI diferente y otro código que no sea de React.
+
+<br><br>useEffect conecta un componente a un sistema externo.
+</p>
+
+
+
+<div><img class="imagen-responsive" src="../img/hook4.jpg" alt=""></div>
+
+<p>
+    Los efectos son una «escotilla de escape» del paradigma React. No utilice efectos para orquestar el flujo de datos de su aplicación. Si no estás interactuando con un sistema externo, es posible que no necesites un efecto.
+
+   <br><br> Hay dos variaciones de useEffect que rara vez se utilizan con diferencias en el tiempo:
+    <br><br>
+    1.- useLayoutEffect se activa antes de que el navegador vuelva a pintar la pantalla. Puedes medir el diseño aquí.
+   <br>2.- useInsertionEffect se activa antes de que React realice cambios en el DOM. Las bibliotecas pueden insertar CSS dinámico aquí.
+
+    </p>
+    <center><h1> Performance Hooks   </h1></center>
+<p>
+Una forma común de optimizar el rendimiento de la renderización es omitir el trabajo innecesario. Por ejemplo, puede decirle a React que reutilice un cálculo almacenado en caché o que omita una nueva renderización si los datos no han cambiado desde la renderización anterior.
+
+<br>Para omitir cálculos y renderizaciones innecesarias, utilice uno de estos ganchos:
+<br><br>
+1.- useMemo le permite almacenar en caché el resultado de un cálculo costoso.
+<br>2.- useCallback le permite almacenar en caché una definición de función antes de pasarla a un componente optimizado.
+
+</p>
+<div><img class="imagen-responsive" src="../img/hook5.jpg" alt=""></div>
+
+<p>
+    A veces, no puedes omitir la reproducción porque la pantalla realmente necesita actualizarse. En ese caso, puede mejorar el rendimiento separando las actualizaciones bloqueantes que deben ser sincrónicas (como escribir en una entrada) de las actualizaciones sin bloqueo que no necesitan bloquear la interfaz de usuario (como actualizar un gráfico).
+
+    <br><br>Para priorizar el renderizado, utilice uno de estos Hooks:
+    <br><br>
+    useTransition le permite marcar una transición de estado como sin bloqueo y permitir que otras actualizaciones la interrumpan.
+    <br><br>useDeferredValue le permite posponer la actualización de una parte no crítica de la interfaz de usuario y dejar que otras partes se actualicen primero.
+</p>
+<center><h1> Resource Hooks  </h1></center>
+<p>
+Un componente puede acceder a los recursos sin tenerlos como parte de su estado. Por ejemplo, un componente puede leer un mensaje de una Promesa o leer información de estilo de un contexto.
+<br><br>
+Para leer un valor de un recurso, utilice este hook:
+<br><br>
+Use permite leer el valor de un recurso como una Promesa o un contexto.
+</p>
+<div><img class="imagen-responsive" src="../img/hook6.jpg" alt=""></div>
+
+<center><h1> <br> Other Hooks </h1></center>
+  
+<p>
+These Hooks are mostly useful to library authors and aren’t commonly used in the application code.
+<br><br>
+1.- useDebugValue lets you customize the label React DevTools displays for your custom Hook.
+<br><br>2.- useId lets a component associate a unique ID with itself. Typically used with accessibility APIs.
+<br><br>3.- useSyncExternalStore lets a component subscribe to an external store.
+
+</p>
+
+
+    </section>
 
     <script src="../script.js"></script>
 </body>
