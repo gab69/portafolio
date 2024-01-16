@@ -5,6 +5,26 @@
     margin: 0;
     
 }
+/* contenido  */
+
+.tabla-contenido{
+    background: #1e2326;
+    margin-top: 75px;
+    text-align: center;
+    padding: 10px 50px 10px 50px;
+    height: 480px;
+    color: white;
+}
+.tabla-contenido .texto{
+
+    text-align: left;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    size: auto;
+    padding: 50px;
+  
+}
+
 
 /* MENU */
 .contenedor-header{
