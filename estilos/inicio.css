@@ -2,10 +2,11 @@
 /* SECCION PORTADA */
 .inicio {
     background: #06122C;
-    height: 675px;
+    height: auto;
     color: #fff;
     display: flex;
     padding-top: 70px;
+    padding-bottom: 98px;
    
 }
 .inicio .contenido-banner{
