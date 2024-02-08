@@ -33,7 +33,7 @@ h2{
     text-align: center;
 }
 h2:active{
-    color: beige;
+    color: rgb(240, 240, 176);
 }
 
 span{
