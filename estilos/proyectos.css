@@ -68,7 +68,12 @@ span{
         margin-bottom: 10px;
         height: 50px;
         width: 100%;
-    
+    }
+
+
+    .e-trabajo{
+     
+        margin: auto 20px;
     }
 }
 .boton:active{
