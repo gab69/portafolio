@@ -1,32 +1,42 @@
 /* SECCION S K I L L S */
-.skills{
+
+body{
     background-color: #252A2E;
+}
+
+.skills{
+   
     color: #fff;
-    
-    padding: 100px 20px 0px 20px;
+    padding: auto 70px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    right: 0;
+    bottom: 0;
 }
-.skills .contenido-seccion{
-    max-width: 1000px;
-    margin: auto;
-    height: 610px;
-}
+
+
+
 .skills h2{
     font-size: 48px;
-    font-family: 'Righteous';
+    
     text-align: center;
     padding: 20px 0;
 
 }
 .skills .fila{
     display: flex;
+    flex-wrap: wrap;
+    
 }
 .skills .fila .col{
-    width: 50%;
+    width: 600px;
     padding: 0 20px;
+    translate: 200px 0;
 }
 .skills .fila .col h3{
     font-size: 28px;
-    font-family: 'Righteous';
+   
     margin-bottom: 25px;
 }
 .skills .skill > span{
@@ -60,6 +70,9 @@
     right: -15px;
     font-size: 14px;
 }
+
+
+
 /* Estas clases se agregaran dinamicamente mediante javascript */
 .skills .skill .javascript{
     width: 0%;
@@ -155,3 +168,16 @@
     100%{width: 65%;}
 }
 
+@media (max-width:500px ){
+    .skills .fila{
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width:1000px ){
+    .skills .fila .col{
+        translate: 0;
+    }
+    
+}

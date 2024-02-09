@@ -1,5 +1,7 @@
 /* MENU */
-
+h1, a {
+    font-family: 'Protest Riot', sans-serif;
+}
 .contenedor-header{
     background: #1e2326;
     position: fixed;
