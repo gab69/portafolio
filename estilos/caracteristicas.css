@@ -1,21 +1,31 @@
-.sobremi{
+body{
     background-color: #1e2326;
+}
+.sobremi{
     color: #fff;
-    padding: 60px 20px;
-    height: 1200px;
+    padding: 60px 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
+.col{
+    min-width: 350px;
+}
 .sobremi h2{
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
-    padding: 20px 0;
+    
 
 }
 .sobremi .contenido-seccion p{
     font: 18px;
     line-height: 22px;
     margin-bottom: 20px;
+    
 }
 .sobremi .contenido-seccion p span{
     color: #1CB698;
@@ -23,6 +33,7 @@
 }
 .sobremi .fila{
     display: flex;
+  
 }
 .sobremi .fila .col
 {
@@ -108,6 +119,26 @@
 
 
 a {
+    margin: 20px;
     color: #1CB698; 
     text-decoration: underline; /* Añade subrayado a los enlaces */
+}
+
+
+@media (max-width:850px )
+{
+    .sobremi .fila{
+        display: block;
+
+      
+    }    
+    ul{
+        padding-left: 0;
+    }
+    
+    .sobremi .contenido-seccion p{
+
+        padding: 0;
+    }
+   
 }
